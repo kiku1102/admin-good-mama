@@ -34,7 +34,7 @@ function ModalAddOrder({ openModal, closeModal }) {
     const onBtnAddClick = () => {
         const isCheck = validateData();
         if (isCheck) {
-            fetchAPI("http://localhost:8000/customers?phoneNumber=" + phone)
+            fetchAPI("https://goodmamabackend.herokuapp.com/customers?phoneNumber=" + phone)
                 .then((data) => {
                     if (data.data.length === 0) {
                         createOrderForNewCustomer();
@@ -63,7 +63,7 @@ function ModalAddOrder({ openModal, closeModal }) {
                 'Content-type': 'application/json; charset=UTF-8',
             }
         }
-        fetchAPI(`http://localhost:8000/customers/${customerId}/orders`, body)
+        fetchAPI(`https://goodmamabackend.herokuapp.com/customers/${customerId}/orders`, body)
             .then((data) => {
                 console.log(data.data)
                 setToastSuccess(true);
@@ -88,7 +88,7 @@ function ModalAddOrder({ openModal, closeModal }) {
                 'Content-type': 'application/json; charset=UTF-8',
             }
         }
-        fetchAPI('http://localhost:8000/customers', body)
+        fetchAPI('https://goodmamabackend.herokuapp.com/customers', body)
             .then((data) => {
                 if (data.data) {
                     callApiCreateOrder(data.data)
@@ -213,7 +213,7 @@ function ModalAddOrder({ openModal, closeModal }) {
         setOrderDetail([...orderDetail]);
     }
     useEffect(() => {
-        fetchAPI('http://localhost:8000/products')
+        fetchAPI('https://goodmamabackend.herokuapp.com/products')
             .then((data) => {
                 setProducts(data.data)
             })

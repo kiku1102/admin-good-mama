@@ -40,7 +40,7 @@ function ModalEditCustomer({ openModal, closeModal, customerEdit, fetchAPI }) {
                 'Content-type': 'application/json; charset=UTF-8',
             },
         };
-        fetchAPI("http://localhost:8000/customers/" + customerEdit._id, body)
+        fetchAPI("https://goodmamabackend.herokuapp.com/customers/" + customerEdit._id, body)
         .then((data) => {
             if(data.data){
               setToastSuccess(true)

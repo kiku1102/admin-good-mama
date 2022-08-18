@@ -63,7 +63,7 @@ const Products = () => {
 
   const filterButton = () => {
     if (filter === "") {
-      fetchAPI('http://localhost:8000/products')
+      fetchAPI('https://goodmamabackend.herokuapp.com/products')
         .then((data) => {
           setProducts(data.data)
         })
@@ -80,7 +80,7 @@ const Products = () => {
   }
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/products')
+    fetchAPI('https://goodmamabackend.herokuapp.com/products')
       .then((data) => {
         setNoPage(Math.ceil(data.data.length / 10));
         setProducts(data.data.slice((page - 1) * 10, page * 10));
@@ -89,7 +89,7 @@ const Products = () => {
         console.error(error.message)
       })
 
-    fetchAPI('http://localhost:8000/product_types')
+    fetchAPI('https://goodmamabackend.herokuapp.com/product_types')
       .then((data) => {
         console.log(data);
         setProductTypes(data.data);

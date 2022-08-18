@@ -38,7 +38,7 @@ function ModalAddProductType({openModal, closeModal}) {
           'Content-type': 'application/json; charset=UTF-8',
       },
   };
-  fetchAPI("http://localhost:8000/product_types", body)
+  fetchAPI("https://goodmamabackend.herokuapp.com/product_types", body)
       .then((data) => {
           setToastSuccess(true)
           closeModal();

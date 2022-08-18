@@ -65,7 +65,7 @@ const ProductTypes = () => {
 
   const filterButton = () => {
     if (filter === "") {
-      fetchAPI('http://localhost:8000/product_types')
+      fetchAPI('https://goodmamabackend.herokuapp.com/product_types')
         .then((data) => {
         setProductTypes(data.data)
         })
@@ -82,7 +82,7 @@ const ProductTypes = () => {
   }
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/product_types')
+    fetchAPI('https://goodmamabackend.herokuapp.com/product_types')
       .then((data) => {
         setNoPage(Math.ceil(data.data.length / 10));
         setProductTypes(data.data.slice((page - 1) * 10, page * 10));

@@ -35,7 +35,7 @@ function ModalAddProduct({ openModal, closeModal }) {
     return responseData
   }
   useEffect(() => {
-    callApi('http://localhost:8000/product_types/')
+    callApi('https://goodmamabackend.herokuapp.com/product_types/')
       .then((data) => {
         console.log(data.data)
         setProductTypes(data.data)
@@ -89,7 +89,7 @@ function ModalAddProduct({ openModal, closeModal }) {
       },
     }
 
-    callApi(`http://localhost:8000/products/`, body)
+    callApi(`https://goodmamabackend.herokuapp.com/products/`, body)
       .then((data) => {
         if (data.data) {
           setToastSuccess(true)

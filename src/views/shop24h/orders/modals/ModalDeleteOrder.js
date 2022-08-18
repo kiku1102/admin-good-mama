@@ -17,7 +17,7 @@ function ModalDeleteOrder({ openModal, closeModal, orderDelete }) {
     };
     let orderId = orderDelete._id;
     let customerId = orderDelete.customerInfo._id
-    fetch("http://localhost:8000/customers/" + customerId + "/orders/" + orderId, body)
+    fetch("https://goodmamabackend.herokuapp.com/customers/" + customerId + "/orders/" + orderId, body)
       .then((data) => {
         setToastSuccess(true)
         closeModal();

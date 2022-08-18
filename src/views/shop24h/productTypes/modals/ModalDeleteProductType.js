@@ -16,7 +16,7 @@ function ModalDeleteProductType({ openModal, closeModal, productTypeDelete }) {
             method: 'DELETE',
         };
         let idDelete = productTypeDelete._id
-        fetch("http://localhost:8000/product_types/" + idDelete, body)
+        fetch("https://goodmamabackend.herokuapp.com/product_types/" + idDelete, body)
             .then((data) => {
                 setToastSuccess(true)
                 closeModal();

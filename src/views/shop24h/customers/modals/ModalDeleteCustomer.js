@@ -17,7 +17,7 @@ function ModalDeleteCustomer({ openModal, closeModal, customerDelete, fetchAPI }
             method: 'DELETE',
         };
         let idDelete = customerDelete._id;
-        fetchAPI(`http://localhost:8000/customers/${idDelete}`, body)
+        fetchAPI(`https://goodmamabackend.herokuapp.com/customers/${idDelete}`, body)
             .then(() => {
                 setToastSuccess(true)
                 closeModal();

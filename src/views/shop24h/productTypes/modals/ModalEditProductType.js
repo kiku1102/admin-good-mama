@@ -39,7 +39,7 @@ function ModalEditProductType({ openModal, closeModal, productTypeEdit }) {
       },
     };
     let idEdit = productTypeEdit._id;
-    fetchAPI("http://localhost:8000/product_types/" + idEdit, body)
+    fetchAPI("https://goodmamabackend.herokuapp.com/product_types/" + idEdit, body)
       .then((data) => {
         setToastSuccess(true)
         closeModal();

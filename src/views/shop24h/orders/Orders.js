@@ -67,7 +67,7 @@ const Orders = () => {
 
   const filterButton = () => {
     if (filter === "") {
-      fetchAPI('http://localhost:8000/orders')
+      fetchAPI('https://goodmamabackend.herokuapp.com/orders')
         .then((data) => {
           setOrders(data.data)
         })
@@ -84,7 +84,7 @@ const Orders = () => {
   }
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/orders')
+    fetchAPI('https://goodmamabackend.herokuapp.com/orders')
       .then((data) => {
         console.log(data);
         setNoPage(Math.ceil(data.data.length / 10));

@@ -66,7 +66,7 @@ function ModalAddCustomer({ openModal, closeModal, fetchAPI }) {
                 'Content-type': 'application/json; charset=UTF-8',
             }
         }
-        fetchAPI('http://localhost:8000/customers', body)
+        fetchAPI('https://goodmamabackend.herokuapp.com/customers', body)
             .then((data) => {
                 if (data.data) {
                     setToastSuccess(true)

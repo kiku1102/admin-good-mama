@@ -59,7 +59,7 @@ function ModalEditOrder({ openModal, closeModal, orderEdit }) {
                 'Content-type': 'application/json; charset=UTF-8',
             },
         };
-        fetchAPI("http://localhost:8000/orders/" + orderId, body)
+        fetchAPI("https://goodmamabackend.herokuapp.com/orders/" + orderId, body)
             .then((data) => {
                 if (data.data) {
                     console.log(data.data)
@@ -202,7 +202,7 @@ function ModalEditOrder({ openModal, closeModal, orderEdit }) {
         setOrderDetail([...orderDetail]);
     }
     useEffect(() => {
-        fetchAPI('http://localhost:8000/products')
+        fetchAPI('https://goodmamabackend.herokuapp.com/products')
             .then((data) => {
                 setProducts(data.data)
             })

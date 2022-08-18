@@ -74,7 +74,7 @@ const Customers = () => {
 
   const filterButton = () => {
     if (filter === "") {
-      fetchAPI('http://localhost:8000/customers')
+      fetchAPI('https://goodmamabackend.herokuapp.com/customers')
         .then((data) => {          
           setCustomers(data.data)
         })
@@ -91,7 +91,7 @@ const Customers = () => {
   }
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/customers')
+    fetchAPI('https://goodmamabackend.herokuapp.com/customers')
       .then((data) => {
         setNoPage(Math.ceil(data.data.length / 10));
         setCustomers(data.data.slice((page - 1) * 10, page * 10));
