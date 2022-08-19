@@ -121,7 +121,6 @@ const ProductTypes = () => {
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col">STT</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">ID</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Tên </CTableHeaderCell>
                   <CTableHeaderCell scope="col">Mô tả</CTableHeaderCell>
                   <CTableHeaderCell scope="col"></CTableHeaderCell>
@@ -136,8 +135,8 @@ const ProductTypes = () => {
                       <CTableDataCell>{type.description}</CTableDataCell>
                       <CTableDataCell>
                       <CButtonGroup variant="contained" >
-                        <CButton color='primary' onClick={() => { editButtonHandler(type) }}>Sửa</CButton>
-                        <CButton color="danger" onClick={() => { deleteButtonHandler(type) }}>Xóa</CButton>
+                        <CButton  color='primary' onClick={() => { editButtonHandler(type) }}>Sửa</CButton>
+                        <CButton  color="danger" onClick={() => { deleteButtonHandler(type) }}>Xóa</CButton>
                       </CButtonGroup>
                       </CTableDataCell>
                     </CTableRow>
